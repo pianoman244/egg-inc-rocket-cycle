@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Egg_Fueling_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bOa-MC-m5Y">
+                                <rect key="frame" x="82" y="47" width="250" height="50"/>
+                                <color key="backgroundColor" red="0.8361737132" green="0.93299239869999995" blue="0.95286601780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="QJm-fi-MbE"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="WR0-a6-syQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Abandon Short Voyegger"/>
+                                <state key="disabled" title="Cycling"/>
+                                <connections>
+                                    <action selector="abandonMission:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m2y-mK-axM"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="uvs-yA-2YC" userLabel="Buttons">
+                                <rect key="frame" x="32" y="812" width="350" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5y-dL-K1x">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
+                                        <color key="backgroundColor" red="0.83617371320724487" green="0.93299239873886108" blue="0.95286601781845093" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="2JY-t8-ark"/>
+                                            <constraint firstAttribute="width" constant="150" id="YCC-UA-1A1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Start Cycle"/>
+                                        <state key="disabled" title="Cycling"/>
+                                        <connections>
+                                            <action selector="cycleButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VbB-ew-MI2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eei-zz-JB9">
+                                        <rect key="frame" x="200" y="0.0" width="150" height="50"/>
+                                        <color key="backgroundColor" red="0.8361737132" green="0.93299239869999995" blue="0.95286601780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="Uko-tA-xcF"/>
+                                            <constraint firstAttribute="height" constant="50" id="x8B-R7-uSK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Fill Rocket"/>
+                                        <connections>
+                                            <action selector="runMissionButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IQ6-0w-vr0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cmQ-w4-af7" userLabel="Storage Tank Container">
+                                <rect key="frame" x="20" y="397" width="374" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="V7a-vE-uvG">
+                                <rect key="frame" x="20" y="233" width="374" height="156"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="GYg-fP-d1d">
+                                <rect key="frame" x="20" y="105" width="374" height="120"/>
+                                <color key="backgroundColor" red="0.79215681550000006" green="0.7607843876" blue="0.60784316059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0s-5B-yXV">
+                                <rect key="frame" x="82" y="107" width="250" height="50"/>
+                                <color key="backgroundColor" red="0.8361737132" green="0.93299239869999995" blue="0.95286601780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="nhG-XL-Ltl"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="yk6-Nh-VXa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Abandon Exhen"/>
+                                <state key="disabled" title="Cycling"/>
+                                <connections>
+                                    <action selector="abandonExhen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WPj-T7-vYL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bOa-MC-m5Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0eo-ue-F0s"/>
+                            <constraint firstItem="cmQ-w4-af7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="70U-wP-be0"/>
+                            <constraint firstItem="V7a-vE-uvG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-20" id="73T-vR-JPo"/>
+                            <constraint firstItem="cmQ-w4-af7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-20" id="AeV-qP-tMJ"/>
+                            <constraint firstItem="GYg-fP-d1d" firstAttribute="top" secondItem="A0s-5B-yXV" secondAttribute="bottom" constant="20" id="CoR-54-Xnn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GYg-fP-d1d" secondAttribute="trailing" constant="20" id="Eom-jv-w6y"/>
+                            <constraint firstItem="uvs-yA-2YC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fps-WG-pv6"/>
+                            <constraint firstItem="uvs-yA-2YC" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="H86-MS-016"/>
+                            <constraint firstItem="bOa-MC-m5Y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="3" id="Vi2-4j-WZc"/>
+                            <constraint firstItem="A0s-5B-yXV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZL2-2S-qWA"/>
+                            <constraint firstItem="cmQ-w4-af7" firstAttribute="top" secondItem="V7a-vE-uvG" secondAttribute="bottom" id="g6x-Z7-dqK"/>
+                            <constraint firstItem="V7a-vE-uvG" firstAttribute="top" secondItem="GYg-fP-d1d" secondAttribute="bottom" constant="30" id="kYx-ET-yOB"/>
+                            <constraint firstItem="GYg-fP-d1d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="pXT-HH-dvR"/>
+                            <constraint firstItem="A0s-5B-yXV" firstAttribute="top" secondItem="bOa-MC-m5Y" secondAttribute="bottom" constant="10" id="q4b-6H-6ro"/>
+                            <constraint firstItem="V7a-vE-uvG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="rGS-cd-n1d"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cycleButton" destination="b5y-dL-K1x" id="aYW-KX-pvL"/>
+                        <outlet property="rocketTankStackView" destination="GYg-fP-d1d" id="j7P-5O-1dC"/>
+                        <outlet property="runMissionButton" destination="eei-zz-JB9" id="aYR-RN-Jnz"/>
+                        <outlet property="storageTankContainer" destination="cmQ-w4-af7" id="x4j-fg-TS9"/>
+                        <outlet property="storageTankStackView" destination="V7a-vE-uvG" id="a5y-NZ-C5X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="79.6875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

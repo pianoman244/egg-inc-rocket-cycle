@@ -1,0 +1,99 @@
+This file contains all of the ideas/goals/plans I have for this project
+
+HOLY COW THIS WAS A PRODUCTIVE DAY
+
+I finished the populate() function and everything related to it. I also got the performCycle() and checkTanks() functions working properly (as far as I know so far) and I got their accompanying diagnostic methods working as well. I can now perform as many cycles as I want and read exactly what is happening in nicely readable detail in the console. GG.
+
+
+BIG IDEA
+
+I don't think it's easy to check if a tank configuration will be able to cycle infinitely. That's just a heck of a lot of brute force. It could be done BUT: the configurations that cycle infinitely would likely have very small consecutive mission numbers and not many people want to cycle any type of rocket infinitely anwyay. A more likely scenario is that people want to fill up their tank on one active day and then have to switch tanks only a few times for the next few weeks of missions. There's tons and tons of possible tanks with very high minimum consecutive missions that can get through 4 cycles which is like a month of exhens.
+
+I FIGURED IT OUT AAHAHAHAHHAHA YES BLAH
+
+IT'S FREAKING WORKING
+
+GG
+
+YES
+
+
+Next:
+    
+- Start thinking about how to deal with different kinds of rockets at the same time? Or maybe just keep that in mind. I'm almost done with the single-rocket problem now and I'll be able to share my results with the main server(!!!!) Especially that 30-50-20-0 tank. Check the results on that again tomorrow. It's 30 consecutive missions with only 3 fuel switches. That's legendary. One switch A WEEK. And I'm sure it won't be that hard to come up with a way to fill the tank up like that. The numbers are so nice.
+
+GG!
+
+
+Next next:
+- Figure out DispatchQueue so I can run the UICycle stuff on a separate thread OR OR OR OR OR figure out how to create a log file with JSON or something that logs the output of every tank cycle and then read through the file on the main thread on a timer or something. Probably will still use DispatchQueue on a separate thread? But either way writing everything in a log file is a long-term goal I need to do anyway.
+
+- Add some variable within the StorageTank to keep track of how many "all-three launches"?? that there are as an additional metric for the sorting algorithm. Maybe average consecutive launches? Cycles with minimum consecutive launches above 3/6/9? Something of that nature.
+
+Good tank configurations list
+-----
+
+I HAVE FOUND THE HOLY GRAIL. One tank that will last for three months with ONE SWITCH PER WEEK. Never thought that was possible but it is. Here it is:
+Tachyon: 6
+Dilithium: 54
+Antimatter: 36
+Dark matter: 4
+
+That's what I'm talking about. It'll take a bit of fine tuning to get it all the way there but the potential is there. I'll figure it out tomorrow or something.
+
+
+Discord Post
+------------
+**NEW AND IMPROVED!** Optimal tank strategy to cycle exhens
+Credit to Joe__ and Hashtru on *their post* for inspiring this post. I probably never would've thought of doing this without seeing their work.
+
+After using their suggested tank strategy I wondered if there was room for improvement. I figured there couldn't be that many tank setups out there, so I built an app to test every unique tank setup. (See below if you don't believe me :) ) To my surprise there were actually hundreds of arguably better tank setups! I will post more later, but for now here is the best one I found so far:
+
+Tachyon: 6 trillion
+Dilithium: 54 trillion
+Antimatter: 36 trillion
+Dark matter: 4 trillion
+
+This tank setup allows you to fuel 6 rockets at a time and switch your tank only once or twice per weekend (during prestige events) for at least **12 weeks straight** and potentially many more. The beauty of this is you only have to switch your farm when you would want to switch it anyway to prestige and you don't have to think about it during the week.
+
+Here is a link to a tutorial on how to set up and use this tank configuration: *I will add this at some point later*
+
+Here is a link to a longer technical description of how I came to this conclusion: *I will add this at some point later*
+
+
+Tutorial
+---
+Setup
+
+Note: exhen = extended henerprise and shen = short henerprise
+
+1. Fill up the tank with *antimatter eggs* (0-0-100-0)
+2. Switch to the *dilithium egg* farm
+3. Remove half of the *antimatter eggs* (0-0-50-0)
+4. Fill up and abandon three exhens (0-0-41-0)
+5. Fill up the tank with dilithium eggs (0-59-41-0)
+6. Switch to the *tachyon egg* farm
+7. Abandon one exhen and fill up the tank with *tachyon eggs* (6-56-38-0)
+8. Switch to the *dark matter egg* farm
+9. Abandon one shen and fill up the tank with *dark matter eggs (6-54-36-4)
+
+Usage
+
+Note: I will attach a video walking through these steps in the future if you are confused. You only need to worry about the two rules-of-thumb for the first month so don't worry about the extra steps yet if they are confusing :)
+
+Here are three rules-of-thumb to follow:
+1. Launch no more than 6 rockets on a single farm. Always switch farms immediately after the 6th launch unless...
+2. If after the 6th launch you one of your fuel tanks doesn't have enough to fuel a rocket, fill up a new rocket with as much fuel as you can before switching farms.
+3. When you switch farms, always switch to the egg type that can fuel the least amount of missions.
+
+Following these rules will get you through 6 full weeks of missions problem-free. However, getting the full 12+ week usage out of this setup takes a little bit of work. On the 42th mission (end of 7th week) you will be 1 trillion dark matter eggs short unless you follow the additional rules below.
+
+Extra step 1 - during 5th week
+On the 5th week when you are on the dark matter farm, fill up and abort one short voyegger. This way you will store 2 trillion more dark matter eggs in your fuel tank preparing for the 7th week. After this step, you will be fine until cycle 11.
+
+Extra step 2 - end of 11th week
+On the 11th week, if all goes well, you will have 4 trillion tachyon eggs and 2 trillion dilithium eggs. To get through this week without switching mid-week, you should switch to the tachyon egg farm and then abort one short voyegger again. This will give you enough tachyon eggs for a week of missions. After that, switch back to the dilithium egg for the week.
+
+This will take you up to the 12th week. More extra steps are required to continue, but I haven't written them out yet. I will update this post when I find time in the coming weeks.
+
+
