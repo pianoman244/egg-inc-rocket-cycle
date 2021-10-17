@@ -57,5 +57,16 @@ You can use the buttons on the screen to practice using the bets StorageTank set
 By trying different combinations, the most weeks in a row I got with only switching farms every 6 missions (once per weekend) is around 20. I forget the exact number. Either way, the UI is a great way to take good combinations found by brute-force and tweak them to last even longer. 
 
 
+### Final things
 
-If you are interested in this project or know Swift and would like to contribute, reach out to me! I would love to see this polished and posted to the App Store at some point.
+If you are interested in this project or know Swift and would like to contribute, reach out to me! I would love to see this polished and posted to the App Store at some point. 
+
+Things to do:
+- Set up a menu in the UI to scroll through different possible tank setups
+- Give the UI access to the TankBrain and allow the user to select different mission types
+- Redesign the UI from scratch to work on different devices and have cleaner code
+- Store all of the user's actions in the UI so that if they make a setup last really long they can look back on what they did
+- Create an "undo" button if the user misclicks really far into a cetain configuration
+- Write all of the unique tank configurations found for a given setup to a file so it doesn't have to be run natively (for devices with less processing power)
+
+I designed this from the beginning to be generalized for any rocket/storage tank in the game. I only focused on the exhen and the best tank setup I found for that because it was in highest demand. There is plenty of work to be done here with a great foundation!
